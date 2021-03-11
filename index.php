@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>123</h1>
+    <?php
+    include_once "db.php";
+    $myConn=new Database();
+    $myConn->showBook();
+    $myConn->disconnect();
+    ?>
 </body>
 </html>
