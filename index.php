@@ -9,10 +9,10 @@
 <body>
     <?php
     include_once "db.php";
-    $myConn=new Database();
-    //$myConn->__construct();
+    $myConn = new Database();
+    $myConn->connect();
     $myConn->showBook();
-    $myConn->disconnect();
+
     ?>
 </body>
 </html>

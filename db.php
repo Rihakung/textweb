@@ -1,17 +1,17 @@
 <?php
 define("hostname", "localhost");
-define("username", 'user');
+define("username", 'kamon');
 define("password", "aWvXFoVGAzOGdWWx");
 define("dbname", "bookstore");
 class Database
 {
     public $conn = null;
-    public function __construct()
+    public function connect()
     {
         $this->conn = new mysqli(hostname, username, password, dbname);
         $this->conn->query("SET NAMES UTF8");
         if ($this->conn->connect_error) echo "not connect";
-        else echo "Connect success55";
+        else echo "";
     }
 
     public function showBook()
@@ -36,11 +36,12 @@ class Database
             foreach ($row as $key => $value) {
                 echo "<td>{$value}</td>";
             }
-            echo "<td><a href='handle.php?delId={$row['BookID']}'>Delete</a></td>";
+           
             echo "</tr>";
         }
         echo "</table>";
     }
+
     public function disconnect(){
         $this->conn->close();
     }
