@@ -10,6 +10,7 @@
     <?php
     include_once "db.php";
     $myConn=new Database();
+    //$myConn->__construct();
     $myConn->showBook();
     $myConn->disconnect();
     ?>
