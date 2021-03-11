@@ -28,7 +28,7 @@ class Database
                 foreach ($row as $key => $value) {
                     echo "<th>{$key}</th>";
                 }
-                echo "<th>OPERATION</th>";
+                //echo "<th>OPERATION</th>";
                 echo "</tr>";
                 $counter++;
             }
