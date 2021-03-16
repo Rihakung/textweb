@@ -12,7 +12,7 @@
     $myConn = new Database();
     $myConn->connect();
     $myConn->showBook();
-    $myConn->disconnect();
+    $myConn->disconnect(); 
 
     ?>
 </body>
