@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <?php 
-        $jsonfile_get_contents("movies.json")
+    <?php
+    $jsonfile = file_get_contents("movies.json");
     ?>
-    <select id="year_movie"></select>
-
-    <script>
-        var str ="";
-        var jsonEx = <?php echo$jsonfile?>
+    <select name="" id="year_movie">
+    </select>
+    <script src="">
+     var str = "";
+     var jsonEx = <?php echo $jsonfile ?>
     </script>
-    <div id = "output"></div>
+    <div id="output"></div> 
 </body>
 </html>
